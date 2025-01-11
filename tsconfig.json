@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "commonjs",
+    "lib": ["es6", "dom"],
+    "types": ["node"],
+    "strict": true,
+    "baseUrl": "./",
+    "outDir": "./dist",
+    "rootDir": "./src"
+  }
+}
