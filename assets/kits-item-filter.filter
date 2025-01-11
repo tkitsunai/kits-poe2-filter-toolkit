@@ -234,7 +234,7 @@ BaseType "Scroll of Wisdom"
 # Currency Tier A: Gemcutter, Annullment
 Show
 Class "Currency"
-BaseType "Orb of Annulment" "Orb of Chance" "Greater Jeweller's Orb" "Distilled Fear" "Distilled Despair"
+BaseType "Orb of Chance" "Greater Jeweller's Orb" "Distilled Fear" "Distilled Despair"
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
 SetBackgroundColor 240 90 35
@@ -268,7 +268,7 @@ SetFontSize 40
 # Currency Tier B: Regal, Vaal ...
 Show
 Class "Currency"
-BaseType "Gemcutter's Prism" "Vaal Orb" "Chaos Orb" "Lesser Jeweller's Orb" "Regal Orb" "Artificer's Orb" "Glassblower's Bauble" "Orb of Alchemy" "Chance Shard"
+BaseType "Orb of Annulment" "Gemcutter's Prism" "Vaal Orb" "Chaos Orb" "Lesser Jeweller's Orb" "Regal Orb" "Artificer's Orb" "Glassblower's Bauble" "Orb of Alchemy" "Chance Shard"
 SetTextColor 255 207 132
 SetBorderColor 255 207 132
 SetBackgroundColor 76 51 12
