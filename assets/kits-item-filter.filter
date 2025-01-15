@@ -268,7 +268,7 @@ SetFontSize 40
 # Currency Tier B: Regal, Vaal ...
 Show
 Class "Currency"
-BaseType "Orb of Annulment" "Gemcutter's Prism" "Vaal Orb" "Chaos Orb" "Lesser Jeweller's Orb" "Regal Orb" "Artificer's Orb" "Glassblower's Bauble" "Orb of Alchemy" "Chance Shard"
+BaseType "Simulacrum Splinter" "Breach Splinter" "Orb of Annulment" "Gemcutter's Prism" "Vaal Orb" "Chaos Orb" "Regal Orb" "Artificer's Orb" "Glassblower's Bauble" "Orb of Alchemy" "Chance Shard"
 SetTextColor 255 207 132
 SetBorderColor 255 207 132
 SetBackgroundColor 76 51 12
@@ -279,7 +279,7 @@ SetFontSize 40
 
 Show
 Class "Currency"
-BaseType "Simulacrum Splinter" "Breach Splinter" " Artifact" 
+BaseType " Artifact" "Lesser Jeweller's Orb"
 SetTextColor 255 207 132
 SetBorderColor 255 207 132
 SetBackgroundColor 76 51 12
@@ -310,16 +310,28 @@ PlayEffect White
 MinimapIcon 2 White Circle
 SetFontSize 40
 
-# Currency Tier C: Vaal, Chaos, Exalt, Exotic
+# Currency Tier B: range 0.4~5ex tier's quality currency items
 Show
-AreaLevel >= 70
 Class "Currency"
-BaseType "Arcanist's Etcher" "Armourer's Scrap" "Blacksmith's Whetstone" "Orb of Augmentation" "Orb of Transmutation" "Regal Shard"
+BaseType "Armourer's Scrap" "Arcanist's Etcher" "Blacksmith's Whetstone"
 SetTextColor 220 190 132
+PlayAlertSound 3 100
+PlayEffect White
+MinimapIcon 2 White Circle
+SetFontSize 40
+
+# Currency: Tier D if high area level, Not valued for me cyrrencies
+Hide
+AreaLevel >= 71
+Class "Currency"
+BaseType "Orb of Augmentation" "Orb of Transmutation" "Regal Shard"
+SetTextColor 220 190 132
+MinimapIcon 2 Grey Circle
 SetFontSize 35
 
-# Currency Tier C: Vaal, Chaos, Exalt, Exotic
+# Currency Tier C: If you are playing at a low level or with a sub-character, it is valued.
 Show
+AreaLevel <= 55
 Class "Currency"
 BaseType "Arcanist's Etcher" "Armourer's Scrap" "Blacksmith's Whetstone" "Orb of Augmentation" "Orb of Transmutation" "Regal Shard"
 SetTextColor 220 190 132
@@ -360,15 +372,37 @@ PlayEffect Purple
 MinimapIcon 1 Purple Square
 SetFontSize 45
 
+# Tables Tier A : Ritual is good for me.
 Show
 Class "Tablet"
-SetTextColor 255 207 255
+BaseType "Ritual Precursor Tablet"
+SetTextColor 255 255 255 255
 SetBorderColor 255 207 255
-SetBackgroundColor 65 20 80
-PlayAlertSound 2 300
+SetBackgroundColor 220 0 255 255
+PlayAlertSound 3 250
 PlayEffect Purple
 MinimapIcon 1 Purple Square
 SetFontSize 45
+
+# Tables Tier B
+Show
+Class "Tablet"
+BaseType "Breach Precursor Tablet" "Delirium Precursor Tablet" "Expedition Precursor Tablet"
+SetTextColor 255 207 255
+SetBorderColor 255 207 255
+SetBackgroundColor 65 20 80
+PlayAlertSound 2 250
+PlayEffect Purple
+MinimapIcon 1 Purple Square
+SetFontSize 40
+
+# Tables Tier C
+Show
+Class "Tablet"
+SetTextColor 255 207 255
+SetBorderColor 255 255 255
+SetBackgroundColor 65 20 80
+SetFontSize 35
 
 Show
 BaseType "Barya" "Ultimatum"
