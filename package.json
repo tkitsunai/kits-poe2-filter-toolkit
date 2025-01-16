@@ -8,7 +8,8 @@
     "release": "tsc && node dist/scripts/release.js",
     "version:patch": "npm version patch",
     "version:minor": "npm version minor",
-    "version:major": "npm version major"
+    "version:major": "npm version major",
+    "pushtag": "git push --follow-tags"
   },
   "keywords": [
     "Path of Exile 2",
