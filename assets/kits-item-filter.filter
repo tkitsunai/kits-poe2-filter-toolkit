@@ -42,7 +42,7 @@ BaseType "Mirror" "Divine" "Perfect Jeweller's Orb"
 SetFontSize 45
 SetTextColor 255 0 0 255
 SetBorderColor 255 0 0 255
-SetBackgroundColor 255 255 255 255
+SetBackgroundColor 255 255 0 255
 PlayAlertSound 6 300
 PlayEffect Red
 MinimapIcon 0 Red Star
@@ -275,8 +275,7 @@ SetFontSize 35
 Hide
 Class "Currency"
 BaseType "Lesser Jeweller's Orb"
-MinimapIcon 1 White Kite
-SetFontSize 30
+SetFontSize 35
 
 Show
 Class "Omen"
@@ -316,7 +315,6 @@ AreaLevel >= 71
 Class "Currency"
 BaseType "Orb of Augmentation" "Orb of Transmutation" "Regal Shard"
 SetTextColor 220 190 132
-MinimapIcon 2 Grey Circle
 SetFontSize 35
 
 # Currency Tier C: If you are playing at a low level or with a sub-character, it is valued.
@@ -325,7 +323,6 @@ AreaLevel <= 55
 Class "Currency"
 BaseType "Arcanist's Etcher" "Armourer's Scrap" "Blacksmith's Whetstone" "Orb of Augmentation" "Orb of Transmutation" "Regal Shard"
 SetTextColor 220 190 132
-MinimapIcon 2 Grey Circle
 SetFontSize 35
 
 Show
