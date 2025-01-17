@@ -163,15 +163,16 @@ SetFontSize 40
 PlayAlertSound 3 300
 MinimapIcon 2 Cyan Diamond
 
-# Chancing base for wands / sceptres
+# Chancing base for wands / sceptres / bow
 Show 
-Rarity Normal
-BaseType == "Siphoning Wand" "Attuned Wand" "Rattling Sceptre" "Omen Sceptre"
+Rarity <= Rare
+BaseType == "Siphoning Wand" "Attuned Wand" "Rattling Sceptre" "Omen Sceptre" "Expert Dualstring Bow"
 ItemLevel >= 81
 SetBorderColor 0 240 190
-SetFontSize 40
-PlayAlertSound 3 300
-MinimapIcon 2 Cyan Diamond
+SetBackgroundColor 0 240 190 100
+SetFontSize 35
+PlayAlertSound 2 180
+MinimapIcon 1 Cyan Diamond
 
 # Special A Tier - Sanctum Relics
 Show 
@@ -408,13 +409,13 @@ BaseType "Waystone"
 SetBorderColor 255 255 255
 SetBackgroundColor 99 27 116 200
 PlayEffect White
-MinimapIcon 0 White Hexagon
+MinimapIcon 1 White Hexagon
 SetFontSize 35
 
 Show
 WaystoneTier = 14
 BaseType "Waystone"
-MinimapIcon 0 White Hexagon
+MinimapIcon 2 White Hexagon
 SetFontSize 35
 
 #--------------------------
