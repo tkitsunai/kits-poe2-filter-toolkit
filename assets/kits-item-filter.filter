@@ -318,8 +318,7 @@ SetTextColor 220 190 132
 SetFontSize 35
 
 # Currency Tier C: If you are playing at a low level or with a sub-character, it is valued.
-Show
-AreaLevel <= 55
+Hide
 Class "Currency"
 BaseType "Arcanist's Etcher" "Armourer's Scrap" "Blacksmith's Whetstone" "Orb of Augmentation" "Orb of Transmutation" "Regal Shard"
 SetTextColor 220 190 132
