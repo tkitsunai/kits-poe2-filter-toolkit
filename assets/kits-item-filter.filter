@@ -154,14 +154,23 @@ SetFontSize 35
 MinimapIcon 2 Cyan Diamond
 PlayEffect Cyan Temp
 
-# Chancing bases
+# Chancing bases for Orb
 Show 
 Rarity Normal
-BaseType == "Sapphire Ring" "Stellar Amulet" "Heavy Belt" "Gold Ring"
+BaseType == "Sapphire Ring" "Heavy Belt" "Gold Ring"
 SetBorderColor 0 240 190
 SetFontSize 40
-PlayAlertSound 3 300
+PlayAlertSound 3 250
 MinimapIcon 2 Cyan Diamond
+
+# Chancing bases for Stellar 
+Show 
+Rarity Normal
+BaseType == "Stellar Amulet"
+SetBorderColor 0 240 190
+SetFontSize 45
+PlayAlertSound 2 300
+MinimapIcon 1 Cyan Diamond
 
 # Chancing base for wands / sceptres / bow
 Show 
@@ -222,10 +231,10 @@ BaseType "Orb of Chance" "Greater Jeweller's Orb" "Distilled Fear" "Distilled De
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
 SetBackgroundColor 240 90 35
-PlayAlertSound 1 300
+PlayAlertSound 1 200
 PlayEffect White
 MinimapIcon 1 Yellow Circle
-SetFontSize 45
+SetFontSize 40
 
 # Currency Tier B: Exalt
 Show
