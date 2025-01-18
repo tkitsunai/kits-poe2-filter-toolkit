@@ -459,7 +459,7 @@ SetFontSize 40
 
 Hide
 Class "Belts"
-Rarity <= Normal
+Rarity <= Magic
 SetFontSize 35
 
 #--------------------------
