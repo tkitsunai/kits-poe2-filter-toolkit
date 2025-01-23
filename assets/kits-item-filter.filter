@@ -16,7 +16,7 @@ SetFontSize 40
 
 Show
 Rarity Unique
-BaseType == "Armoured Cap" "Emerald" "Furtive Wraps" "Incense Relic" "Ornate Belt" "Ring" "Ruby" "Sapphire" "Smuggler Coat" "Stone Tower Shield" "Time-Lost Diamond" "Timeless Jewel" "Ultimate Life Flask" "Ultimate Mana Flask" "Utility Belt" "Vase Relic"
+BaseType == "Armoured Cap" "Emerald" "Furtive Wraps" "Incense Relic" "Ornate Belt" "Ring" "Ruby" "Sapphire" "Smuggler Coat" "Stone Tower Shield" "Time-Lost Diamond" "Timeless Jewel" "Ultimate Life Flask" "Ultimate Mana Flask" "Utility Belt" "Vase Relic" "Diamond"
 SetFontSize 45
 SetTextColor 255 0 0 255
 SetBorderColor 255 0 0 255
@@ -34,6 +34,18 @@ PlayAlertSound 3 300
 PlayEffect Brown
 MinimapIcon 1 Brown Star
 SetFontSize 40
+
+## JokeFilter: Divine Power
+Show
+Class "Currency"
+BaseType "Divine"
+SetFontSize 45
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
+SetBackgroundColor 255 255 0 255
+CustomAlertSound "resources/divine_power.mp3" 300
+PlayEffect Red
+MinimapIcon 0 Red Star
 
 ## Divine Orb Style
 Show
@@ -224,16 +236,28 @@ BaseType "Scroll of Wisdom"
 # Socketables and Special Character Equipment
 #--------------------------
 
-# Currency Tier A: Gemcutter, Annullment
+# Currency Tier A
 Show
 Class "Currency"
-BaseType "Orb of Chance" "Greater Jeweller's Orb" "Distilled Fear" "Distilled Despair"
+BaseType "Distilled Fear" "Distilled Despair"
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
 SetBackgroundColor 240 90 35
 PlayAlertSound 1 200
-PlayEffect White
+PlayEffect Yellow
 MinimapIcon 1 Yellow Circle
+SetFontSize 40
+
+# Currency Tier A-
+Show
+Class "Currency"
+BaseType "Orb of Chance" "Greater Jeweller's Orb"
+SetTextColor 255 255 255 255
+SetBorderColor 255 255 255 255
+SetBackgroundColor 240 90 35
+PlayAlertSound 2 200
+PlayEffect White
+MinimapIcon 2 White Circle
 SetFontSize 40
 
 # Currency Tier B: Exalt
@@ -306,7 +330,6 @@ SetBorderColor 255 207 132
 SetBackgroundColor 76 51 12
 PlayAlertSound 2 300
 PlayEffect White
-MinimapIcon 2 White Circle
 SetFontSize 40
 
 # Currency Tier B: range 0.4~5ex tier's quality currency items

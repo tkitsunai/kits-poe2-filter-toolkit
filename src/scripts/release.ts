@@ -30,4 +30,8 @@ output.on("close", () => {
 
 archive.pipe(output);
 archive.file(filterFilePath, { name: filterFileName });
+
+const folderToZip = "assets/resources";
+archive.directory(folderToZip, "resources");
+
 archive.finalize();
