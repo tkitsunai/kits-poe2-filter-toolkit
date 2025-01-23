@@ -16,6 +16,17 @@ SetFontSize 40
 
 Show
 Rarity Unique
+BaseType == "Ultimate Mana Flask"
+SetFontSize 45
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Red
+MinimapIcon 0 Red Star
+
+Show
+Rarity Unique
 BaseType == "Armoured Cap" "Emerald" "Furtive Wraps" "Incense Relic" "Ornate Belt" "Ring" "Ruby" "Sapphire" "Smuggler Coat" "Stone Tower Shield" "Time-Lost Diamond" "Timeless Jewel" "Ultimate Life Flask" "Ultimate Mana Flask" "Utility Belt" "Vase Relic" "Diamond"
 SetFontSize 45
 SetTextColor 255 0 0 255
@@ -447,7 +458,6 @@ SetFontSize 35
 Show
 WaystoneTier = 14
 BaseType "Waystone"
-MinimapIcon 2 White Hexagon
 SetFontSize 35
 
 #--------------------------
