@@ -109,13 +109,10 @@ PlayEffect Red
 MinimapIcon 0 Red Star
 
 # Level 19 gems are exist in large quantities
-Hide
+Show
 ItemLevel = 19
 BaseType "Uncut Skill Gem" "Uncut Spirit Gem"
-SetTextColor 20 240 240
-SetBorderColor 20 240 240
-PlayEffect Cyan
-MinimapIcon 1 Cyan Triangle
+SetTextColor 255 255 255
 SetFontSize 30
 
 # Make support gems pop during campaign
@@ -180,7 +177,7 @@ PlayEffect Cyan Temp
 # Chancing bases for Orb
 Show 
 Rarity Normal
-BaseType == "Sapphire Ring" "Heavy Belt" "Gold Ring"
+BaseType == "Sapphire Ring" "Gold Ring"
 SetBorderColor 0 240 190
 SetFontSize 40
 PlayAlertSound 3 250
@@ -296,7 +293,7 @@ SetFontSize 40
 # Currency Tier B
 Show
 Class "Currency"
-BaseType "Simulacrum Splinter" "Breach Splinter" "Orb of Annulment" "Gemcutter's Prism" "Vaal Orb" "Chaos Orb" "Regal Orb" "Artificer's Orb" "Glassblower's Bauble" "Orb of Alchemy" "Chance Shard"
+BaseType "Simulacrum Splinter" "Breach Splinter" "Orb of Annulment" "Gemcutter's Prism" "Vaal Orb" "Chaos Orb" "Regal Orb" "Artificer's Orb" "Orb of Alchemy" "Chance Shard"
 SetTextColor 255 207 132
 SetBorderColor 255 207 132
 SetBackgroundColor 76 51 12
@@ -304,6 +301,13 @@ PlayAlertSound 2 100
 PlayEffect White
 MinimapIcon 2 White Circle
 SetFontSize 40
+
+Hide
+Class "Currency"
+BaseType "Glassblower's Bauble"
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+SetBackgroundColor 76 51 12
 
 Show
 Class "Currency"
@@ -335,7 +339,25 @@ SetFontSize 40
 
 Show
 Class "Currency"
-BaseType "Distilled" "Catalyst" "Essence of"
+BaseType "Adaptive Catalyst"
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+SetBackgroundColor 76 51 12
+PlayAlertSound 2 300
+PlayEffect White
+SetFontSize 40
+
+Hide
+Class "Currency"
+BaseType "Catalyst"
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+SetBackgroundColor 76 51 12
+SetFontSize 40
+
+Show
+Class "Currency"
+BaseType "Distilled" "Essence of"
 SetTextColor 255 207 132
 SetBorderColor 255 207 132
 SetBackgroundColor 76 51 12
@@ -348,9 +370,6 @@ Show
 Class "Currency"
 BaseType "Armourer's Scrap" "Arcanist's Etcher" "Blacksmith's Whetstone"
 SetTextColor 220 190 132
-PlayAlertSound 3 100
-PlayEffect White
-MinimapIcon 2 White Circle
 SetFontSize 40
 
 # Currency: Tier D if high area level, Not valued for me cyrrencies
@@ -402,22 +421,10 @@ PlayEffect Purple
 MinimapIcon 1 Purple Square
 SetFontSize 45
 
-# Tables Tier A : Ritual is good for me.
-Show
-Class "Tablet"
-BaseType "Ritual Precursor Tablet"
-SetTextColor 255 255 255 255
-SetBorderColor 255 207 255
-SetBackgroundColor 220 0 255 255
-PlayAlertSound 3 250
-PlayEffect Purple
-MinimapIcon 1 Purple Square
-SetFontSize 45
-
 # Tables Tier B
 Show
 Class "Tablet"
-BaseType "Breach Precursor Tablet" "Delirium Precursor Tablet" "Expedition Precursor Tablet" "Overseer Precursor Tablet"
+BaseType "Breach Precursor Tablet" "Expedition Precursor Tablet" "Overseer Precursor Tablet"
 SetTextColor 255 207 255
 SetBorderColor 255 207 255
 SetBackgroundColor 65 20 80
@@ -426,12 +433,17 @@ PlayEffect Purple
 MinimapIcon 1 Purple Square
 SetFontSize 40
 
-# Tables Tier C
-Show
+# Tables Tier C Hiding
+Hide
 Class "Tablet"
-SetTextColor 255 207 255
-SetBorderColor 255 255 255
-SetBackgroundColor 65 20 80
+BaseType "Delirium Precursor Tablet"
+SetTextColor 255 255 255
+SetFontSize 35
+
+# Tables Tier C Hiding
+Hide
+Class "Tablet"
+SetTextColor 255 255 255
 SetFontSize 35
 
 Show
