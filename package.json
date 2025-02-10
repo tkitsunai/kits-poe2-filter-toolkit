@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "release": "tsc && node dist/scripts/release.js",
+    "clear-release": "tsc && node dist/scripts/clear.js",
+    "release": "pnpm run build && pnpm run clear-release && node dist/scripts/release.js",
     "version:patch": "npm version patch",
     "version:minor": "npm version minor",
     "version:major": "npm version major",

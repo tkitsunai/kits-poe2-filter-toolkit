@@ -1,6 +1,6 @@
 #--------------------------
 # Filter
-# Strictness: Strict
+# Strictness: Very Strict / Personalized
 # Included Custom Sounds: Yes
 #--------------------------
 
@@ -109,7 +109,7 @@ MinimapIcon 0 Red Star
 ## Divine Orb Style
 Show
 Class "Currency"
-BaseType "Mirror" "Divine" "Perfect Jeweller's Orb"
+BaseType "Mirror" "Perfect Jeweller's Orb"
 SetFontSize 45
 SetTextColor 255 0 0 255
 SetBorderColor 255 0 0 255
@@ -130,7 +130,7 @@ MinimapIcon 0 Red Star
 
 
 #--------------------------
-# Gold is all hiding
+# Gold
 #--------------------------
 
 Hide
@@ -231,11 +231,12 @@ SetFontSize 40
 PlayAlertSound 3 250
 MinimapIcon 2 Cyan Diamond
 
-# Chancing bases for Stellar 
+# Chancing bases for Stellar
 Show 
 Rarity Normal
 BaseType == "Stellar Amulet"
 SetBorderColor 0 240 190
+SetBackgroundColor 0 240 190 100
 SetFontSize 45
 PlayAlertSound 2 300
 MinimapIcon 1 Cyan Diamond
@@ -248,7 +249,6 @@ ItemLevel >= 81
 SetBorderColor 0 240 190
 SetBackgroundColor 0 240 190 100
 SetFontSize 35
-PlayAlertSound 2 180
 MinimapIcon 1 Cyan Diamond
 
 # Special A Tier - Sanctum Relics
@@ -258,7 +258,7 @@ SetTextColor 0 240 190
 SetBorderColor 0 240 190
 SetFontSize 40
 MinimapIcon 1 Cyan Diamond
-PlayAlertSound 2 300
+PlayAlertSound 2 200
 PlayEffect Cyan
 
 # Special A Tier - Rare Jewels
@@ -272,21 +272,12 @@ MinimapIcon 1 Cyan Diamond
 PlayEffect Cyan
 PlayAlertSound 2 300
 
-# Special B Tier - Any Runes and Charms
-# Charm is not valuables
-Hide
-BaseType " Rune" " Charm"
-SetTextColor 0 240 190
-PlayEffect Cyan Temp
-
 #--------------------------
 # Scroll of Wisdom High Level Hiding
 #--------------------------
 
 Hide
-BaseType "Scroll of Wisdom"
-#AreaLevel >= 65
-#Rarity <= Magic
+BaseType "Scroll of Wisdom"  " Rune" " Charm"
 
 #--------------------------
 # Socketables and Special Character Equipment
@@ -515,6 +506,10 @@ Class "Tablet"
 SetTextColor 255 255 255
 SetFontSize 35
 
+#--------------------------
+# Barya / Ultimatum
+#--------------------------
+
 Show
 BaseType "Barya" "Ultimatum"
 ItemLevel >= 80
@@ -527,7 +522,7 @@ Hide
 BaseType "Barya" "Ultimatum"
 
 #--------------------------
-# Waystones 15
+# Waystones
 #--------------------------
 
 Show
@@ -579,49 +574,13 @@ Class "Belts"
 Rarity <= Rare
 SetFontSize 35
 
-#--------------------------
-# Salvagable Items
-#--------------------------
-
-#Hide
-#Quality > 0
-#Rarity Normal
-#SetBorderColor 200 200 200
-#SetFontSize 35
-
-#Show
-#Quality > 0
-#Rarity Magic
-#SetBorderColor 0 0 200
-#SetFontSize 35
-
-#--------------------------
-# Rares detail for chance to Exalt
-#--------------------------
-
-#
-# Valuables Rare gears for Sceptre/Wand
-# Show, Chance to Orb/Exalt
-Show
-Rarity Rare
-BaseType == "Siphoning Wand" "Attuned Wand" "Rattling Sceptre" "Omen Sceptre"
-ItemLevel >= 81
-SetBorderColor 0 240 190
-SetBackgroundColor 0 0 0 200
-SetFontSize 35
-
-# Gears for Sceptre/Wand
-# Hiding, No Chance
+# Hiding, No Chance for Sceptre and Wand
 Hide
 Rarity Rare
 BaseType == "Siphoning Wand" "Attuned Wand" "Rattling Sceptre" "Omen Sceptre"
 ItemLevel <= 80
 DropLevel < 80
 SetFontSize 35
-
-#--------------------------
-# Hide Rules (only high level), super light edition
-#--------------------------
 
 Hide
 AreaLevel > 70
@@ -666,38 +625,13 @@ Rarity <= Normal
 DropLevel < 50
 Class "Body Armours" "Helmets" "Boots" "Gloves" "Shields" "Foci" "Quivers" "One Hand Maces" "Two Hand Maces" "Quarterstaves" "Bows" "Crossbows"
 
-#--------------------------
-# OPTIONAL RULES
-#--------------------------
-# TO ENABLE RULES, REMOVE THE # AT THE START OF THE LINE
-
-### OPTIONAL RULE: Hide random bases
-# REMOVE THE BASES YOU --DO-- WANT TO SEE BEFORE SETTING TO HIDE
-
 Hide
 Rarity <= Magic
 Class "Flasks" "Body Armours" "Helmets" "Boots" "Gloves" "Shields" "Foci" "Quivers" "One Hand Maces" "Two Hand Maces" "Staves" "Quarterstaves" "Bows" "Crossbows" "Wands" "Sceptres"
 
-### OPTIONAL RULE: REDUCES BACKGROUND ON LOW LEVEL BASES
-
-# Show
-# Rarity <= Magic
-# Class "Flasks" "Body Armours" "Helmets" "Boots" "Gloves" "Shields" "Foci" "Quivers" "One Hand Maces" "Two Hand Maces" "Staves" "Quarterstaves" "Bows" "Crossbows" "Wands" "Sceptres"
-# AreaLevel >= 65
-# DropLevel <= 50
-# SetBackgroundColor 0 0 0 125
-
 Hide
 BaseType == "Amethyst Ring" "Attuned Wand" "Breach Ring" "Chiming Staff" "Expert Altar Robe" "Expert Barrier Quarterstaff" "Expert Bombard Crossbow" "Expert Brigand Mace" "Expert Cloaked Mail" "Expert Construct Hammer" "Expert Crumbling Maul" "Expert Doubled Gauntlets" "Expert Dualstring Bow" "Expert Dyad Crossbow" "Expert Edged Buckler" "Expert Elite Greathelm" "Expert Feathered Sandals" "Expert Feathered Targe" "Expert Feathered Tiara" "Expert Forlorn Crossbow" "Expert Goldcast Cuffs" "Expert Heavy Crown" "Expert Hexer's Robe" "Expert Hunter Hood" "Expert Hunting Shoes" "Expert Intricate Gloves" "Expert Iron Cuirass" "Expert Keth Raiment" "Expert Leaden Greathammer" "Expert Lizardscale Boots" "Expert Moulded Mitts" "Expert Oak Greathammer" "Expert Omen Crest Shield" "Expert Pathfinder Coat" "Expert Pelt Leggings" "Expert Pelt Mantle" "Expert Plumed Focus" "Expert Rogue Armour" "Expert Sacrificial Mantle" "Expert Scale Mail" "Expert Scalper's Jacket" "Expert Serpentscale Coat" "Expert Shaman Mantle" "Expert Shielded Helm" "Expert Slicing Quarterstaff" "Expert Spined Bracers" "Expert Spiral Wraps" "Expert Stacked Sabatons" "Expert Steel Plate" "Expert Stone Greaves" "Expert Stone Tower Shield" "Expert Studded Vest" "Expert Tribal Mask" "Expert Vaal Cuirass" "Expert Warpick" "Expert Waxed Jacket" "Expert Wayfarer Jacket" "Expert Zealot Bow" "Omen Sceptre" "Plate Belt" "Primed Quiver" "Prismatic Ring" "Rattling Sceptre" "Siphoning Wand" "Solar Amulet" "Voltaic Staff" 
 Rarity <= Magic
-
-#--------------------------
-# Meta
-#--------------------------
-
-# If this thing crashes, time to update your filter!
-# This is here to prevent people to use this filter for AGES. Expert items will get removed eventually
-# Get a new filter from www.filterblade.xyz
 
 Show
 BaseType == "Expert Laced Boots"
