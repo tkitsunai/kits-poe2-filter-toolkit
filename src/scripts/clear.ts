@@ -3,19 +3,17 @@ import * as path from "path";
 
 const releaseDir = "release";
 
-function clearReleaseFolder() {
+function clearReleaseFolder(releaseDir: string) {
   if (fs.existsSync(releaseDir)) {
     fs.readdirSync(releaseDir).forEach((file) => {
       const filePath = path.join(releaseDir, file);
-      const stat = fs.statSync(filePath);
-
-      if (stat.isDirectory()) {
-        fs.rmdirSync(filePath, { recursive: true });
+      if (fs.lstatSync(filePath).isDirectory()) {
+        clearReleaseFolder(filePath);
       } else {
-        fs.unlinkSync(filePath);
+        fs.rmSync(filePath);
       }
     });
   }
 }
 
-clearReleaseFolder();
+clearReleaseFolder(releaseDir);
