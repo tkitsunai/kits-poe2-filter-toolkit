@@ -1,16 +1,13 @@
 {
   "name": "kits-poe2-itemfilter",
-  "version": "3.0.1",
-  "description": "",
-  "main": "index.js",
+  "version": "1.0.0",
+  "type": "module",
   "scripts": {
-    "build": "tsc",
-    "clear-release": "tsc && node dist/scripts/clear.js",
-    "release": "pnpm run build && pnpm run clear-release && node dist/scripts/release.js",
-    "version:patch": "npm version patch",
-    "version:minor": "npm version minor",
-    "version:major": "npm version major",
-    "pushtag": "git push --follow-tags"
+    "version:manager:major": "npm version major --workspace @kits-poe2-tools/filter-manager",
+    "version:manager:minor": "npm version minor --workspace @kits-poe2-tools/filter-manager",
+    "version:manager:patch": "npm version patch --workspace @kits-poe2-tools/filter-manager",
+    "pushtag": "git push --tags",
+    "test": "pnpm -r run test"
   },
   "keywords": [
     "Path of Exile 2",
@@ -18,12 +15,14 @@
   ],
   "author": "",
   "license": "MIT",
-  "dependencies": {
-    "archiver": "^7.0.1",
-    "typescript": "^5.7.3"
-  },
   "devDependencies": {
     "@types/archiver": "^6.0.3",
-    "@types/node": "^22.10.5"
-  }
+    "@types/node": "^22.13.1",
+    "esbuild": "^0.25.0",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.5"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
 }

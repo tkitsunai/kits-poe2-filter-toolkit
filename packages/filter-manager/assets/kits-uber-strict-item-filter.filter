@@ -1,6 +1,6 @@
 #--------------------------
 # Filter
-# Strictness: Very Strict / Personalized
+# Strictness: Uber
 # Included Custom Sounds: Yes
 #--------------------------
 
@@ -46,6 +46,10 @@ Hide
 Rarity Rare
 BaseType "Advanced stone tower shield"
 
+Hide
+Rarity Rare
+Class "One Hand Maces" "Two Hand Maces" "Quarterstaves" "Crossbows"
+
 #--------------------------
 # Overrides - Uniques, Valuables
 #--------------------------
@@ -64,7 +68,7 @@ SetFontSize 40
 
 Show
 Rarity Unique
-BaseType == "Ultimate Mana Flask" "Diamond"
+BaseType == "Ultimate Mana Flask" "Ultimate Life Flask" "Diamond"
 SetFontSize 45
 SetTextColor 255 0 0 255
 SetBorderColor 255 0 0 255
@@ -75,7 +79,18 @@ MinimapIcon 0 Red Star
 
 Show
 Rarity Unique
-BaseType == "Armoured Cap" "Emerald" "Furtive Wraps" "Incense Relic" "Ornate Belt" "Ring" "Ruby" "Sapphire" "Smuggler Coat" "Stone Tower Shield" "Time-Lost Diamond" "Timeless Jewel" "Ultimate Life Flask" "Ultimate Mana Flask" "Utility Belt" "Vase Relic" "Diamond"
+BaseType "Mirror"
+SetFontSize 45
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
+SetBackgroundColor 255 255 0 255
+CustomAlertSound "resources/seven-flash.mp3" 300
+PlayEffect Red
+MinimapIcon 0 Red Star
+
+Show
+Rarity Unique
+BaseType == "Armoured Cap" "Emerald" "Furtive Wraps" "Incense Relic" "Ornate Belt" "Ring" "Ruby" "Sapphire" "Smuggler Coat" "Stone Tower Shield" "Time-Lost Diamond" "Timeless Jewel" "Ultimate Mana Flask" "Utility Belt" "Vase Relic" "Diamond"
 SetFontSize 45
 SetTextColor 255 0 0 255
 SetBorderColor 255 0 0 255
@@ -130,7 +145,7 @@ MinimapIcon 0 Red Star
 
 
 #--------------------------
-# Gold
+# Gold Hiding
 #--------------------------
 
 Hide
@@ -144,7 +159,6 @@ MinimapIcon 2 Grey Cross
 # Uncut Gems
 #--------------------------
 
-# Level 20 gems go tink
 Show
 ItemLevel = 20
 BaseType "Uncut Skill Gem" "Uncut Spirit Gem"
@@ -156,8 +170,7 @@ PlayAlertSound 6 300
 PlayEffect Red
 MinimapIcon 0 Red Star
 
-# Level 19 gems are exist in large quantities
-Show
+Hide
 ItemLevel = 19
 BaseType "Uncut Skill Gem" "Uncut Spirit Gem"
 SetTextColor 255 255 255
@@ -174,17 +187,16 @@ PlayEffect Cyan
 MinimapIcon 1 Cyan Triangle
 SetFontSize 40
 
-# Gems up to level 18 in maps don't get a special highlight
-Show
-ItemLevel = 19
-BaseType "Uncut Skill Gem"
+# Basicary support gem is not valuables.
+Hide
+BaseType "Uncut Skill Gem" "Uncut Spirit Gem"
 SetTextColor 20 240 240
 SetBorderColor 20 240 240
 SetFontSize 30
 
 # Basicary support gem is not valuables.
 Hide
-BaseType "Uncut Skill Gem" "Uncut Spirit Gem" "Uncut Support Gem"
+BaseType "Uncut Support Gem"
 SetTextColor 20 240 240
 SetBorderColor 20 240 240
 SetFontSize 30
@@ -235,10 +247,11 @@ MinimapIcon 2 Cyan Diamond
 Show 
 Rarity Normal
 BaseType == "Stellar Amulet"
+SetTextColor 255 255 255
 SetBorderColor 0 240 190
 SetBackgroundColor 0 240 190 100
 SetFontSize 45
-PlayAlertSound 2 300
+PlayAlertSound 10 300
 MinimapIcon 1 Cyan Diamond
 
 # Chancing base for wands / sceptres / bow
@@ -247,7 +260,7 @@ Rarity <= Rare
 BaseType == "Siphoning Wand" "Attuned Wand" "Rattling Sceptre" "Omen Sceptre" "Expert Dualstring Bow"
 ItemLevel >= 81
 SetBorderColor 0 240 190
-SetBackgroundColor 0 240 190 100
+SetBackgroundColor 0 240 190 50
 SetFontSize 35
 MinimapIcon 1 Cyan Diamond
 
@@ -279,10 +292,6 @@ PlayAlertSound 2 300
 Hide
 BaseType "Scroll of Wisdom"  " Rune" " Charm"
 
-#--------------------------
-# Socketables and Special Character Equipment
-#--------------------------
-
 # Currency Tier A
 Show
 Class "Currency"
@@ -298,11 +307,11 @@ SetFontSize 40
 # Currency Tier A-
 Show
 Class "Currency"
-BaseType "Orb of Chance" "Greater Jeweller's Orb"
+BaseType "Greater Jeweller's Orb"
 SetTextColor 255 255 255 255
 SetBorderColor 255 255 255 255
 SetBackgroundColor 240 90 35
-PlayAlertSound 2 200
+PlayAlertSound 2 300
 PlayEffect White
 MinimapIcon 2 White Circle
 SetFontSize 40
@@ -310,7 +319,19 @@ SetFontSize 40
 # Currency Tier B: Exalt
 Show
 Class "Currency"
-BaseType "Exotic Coinage" "Exalted Orb"
+BaseType  "Chaos Orb" "Orb of Alchemy" "Orb of Chance"  "Orb of Annulment"
+SetTextColor 255 255 255
+SetBorderColor 255 207 92
+SetBackgroundColor 240 90 35
+PlayAlertSound 4 300
+PlayEffect Yellow
+MinimapIcon 1 Blue Circle
+SetFontSize 40
+
+# Currency Tier B: Exalt
+Show
+Class "Currency"
+BaseType "Exalted Orb"  "Chaos Orb"
 SetTextColor 255 207 92
 SetBorderColor 255 207 92
 SetBackgroundColor 76 51 12
@@ -332,7 +353,7 @@ SetFontSize 40
 # Currency Tier B
 Show
 Class "Currency"
-BaseType "Simulacrum Splinter" "Breach Splinter" "Orb of Annulment" "Gemcutter's Prism" "Vaal Orb" "Chaos Orb" "Artificer's Orb" "Orb of Alchemy" 
+BaseType "Simulacrum Splinter" "Breach Splinter" "Gemcutter's Prism" "Vaal Orb" "Artificer's Orb"
 SetTextColor 255 207 132
 SetBorderColor 255 207 132
 SetBackgroundColor 76 51 12
@@ -341,10 +362,22 @@ PlayEffect White
 MinimapIcon 2 White Circle
 SetFontSize 40
 
+# Currency Tier B
+Show
+Class "Currency"
+BaseType "Gemcutter's Prism" "Vaal Orb" "Artificer's Orb" "Chance Shard"
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+SetBackgroundColor 76 51 12
+PlayAlertSound 2 100
+PlayEffect White
+MinimapIcon 2 White Circle
+SetFontSize 35
+
 # Currency Tier B 1/3 ex
 Hide
   Class "Currency"
-  BaseType "Regal Orb" "Chance Shard"
+  BaseType "Regal Orb"
   SetTextColor 255 207 132
   SetBorderColor 255 207 132
   SetBackgroundColor 76 51 12
@@ -359,13 +392,10 @@ SetBackgroundColor 76 51 12
 
 Show
 Class "Currency"
-BaseType " Artifact"
+BaseType " Artifact" "Exotic Coinage"
 SetTextColor 255 207 132
 SetBorderColor 255 207 132
 SetBackgroundColor 76 51 12
-PlayAlertSound 2 100
-PlayEffect White Temp
-MinimapIcon 1 White Kite
 SetFontSize 35
 
 # Lesser is not valuables
@@ -510,7 +540,7 @@ SetFontSize 35
 # Barya / Ultimatum
 #--------------------------
 
-Show
+Hide
 BaseType "Barya" "Ultimatum"
 ItemLevel >= 80
 SetTextColor 255 207 255
@@ -526,11 +556,12 @@ BaseType "Barya" "Ultimatum"
 #--------------------------
 
 Show
-WaystoneTier = 15
+WaystoneTier >= 15
 BaseType "Waystone"
 SetBorderColor 255 255 255
 SetBackgroundColor 99 27 116 200
 PlayEffect White
+PlayAlertSound 2 200
 MinimapIcon 1 White Hexagon
 SetFontSize 35
 
@@ -550,7 +581,7 @@ SetBorderColor 255 255 255
 SetFontSize 35
 
 #--------------------------
-# Value Rares
+# Rings, Amulets, Belts
 #--------------------------
 
 Show
@@ -559,10 +590,8 @@ Rarity Rare
 SetFontSize 35
 SetTextColor 233 206 75
 SetBorderColor 233 206 75
-
-#--------------------------
-# Rings, Amulets, Belts
-#--------------------------
+PlayAlertSound 2 200
+PlayEffect Yellow Temp
 
 Hide
 Class "Rings" "Amulets"
@@ -574,13 +603,37 @@ Class "Belts"
 Rarity <= Rare
 SetFontSize 35
 
-# Hiding, No Chance for Sceptre and Wand
+# Quivers have some relevant bases at 50+ so we treat them different
+Hide
+AreaLevel > 74
+Rarity <= Magic
+DropLevel < 50
+Class "Quivers"
+
+# BaseLevel filtering
+
 Hide
 Rarity Rare
-BaseType == "Siphoning Wand" "Attuned Wand" "Rattling Sceptre" "Omen Sceptre"
+ItemLevel >= 81
+SetBorderColor 0 190 63
+
+Hide
+Rarity <= Rare
 ItemLevel <= 80
-DropLevel < 80
-SetFontSize 35
+
+Hide
+AreaLevel > 70
+Rarity <= Normal
+DropLevel < 50
+Class "Body Armours" "Helmets" "Boots" "Gloves" "Shields" "Foci" "Quivers" "One Hand Maces" "Two Hand Maces" "Quarterstaves" "Bows" "Crossbows"
+
+Hide
+Rarity <= Magic
+Class "Flasks" "Body Armours" "Helmets" "Boots" "Gloves" "Shields" "Foci" "Quivers" "One Hand Maces" "Two Hand Maces" "Staves" "Quarterstaves" "Bows" "Crossbows" "Wands" "Sceptres"
+
+Hide
+BaseType == "Amethyst Ring" "Attuned Wand" "Breach Ring" "Chiming Staff" "Expert Altar Robe" "Expert Barrier Quarterstaff" "Expert Bombard Crossbow" "Expert Brigand Mace" "Expert Cloaked Mail" "Expert Construct Hammer" "Expert Crumbling Maul" "Expert Doubled Gauntlets" "Expert Dualstring Bow" "Expert Dyad Crossbow" "Expert Edged Buckler" "Expert Elite Greathelm" "Expert Feathered Sandals" "Expert Feathered Targe" "Expert Feathered Tiara" "Expert Forlorn Crossbow" "Expert Goldcast Cuffs" "Expert Heavy Crown" "Expert Hexer's Robe" "Expert Hunter Hood" "Expert Hunting Shoes" "Expert Intricate Gloves" "Expert Iron Cuirass" "Expert Keth Raiment" "Expert Leaden Greathammer" "Expert Lizardscale Boots" "Expert Moulded Mitts" "Expert Oak Greathammer" "Expert Omen Crest Shield" "Expert Pathfinder Coat" "Expert Pelt Leggings" "Expert Pelt Mantle" "Expert Plumed Focus" "Expert Rogue Armour" "Expert Sacrificial Mantle" "Expert Scale Mail" "Expert Scalper's Jacket" "Expert Serpentscale Coat" "Expert Shaman Mantle" "Expert Shielded Helm" "Expert Slicing Quarterstaff" "Expert Spined Bracers" "Expert Spiral Wraps" "Expert Stacked Sabatons" "Expert Steel Plate" "Expert Stone Greaves" "Expert Stone Tower Shield" "Expert Studded Vest" "Expert Tribal Mask" "Expert Vaal Cuirass" "Expert Warpick" "Expert Waxed Jacket" "Expert Wayfarer Jacket" "Expert Zealot Bow" "Omen Sceptre" "Plate Belt" "Primed Quiver" "Prismatic Ring" "Rattling Sceptre" "Siphoning Wand" "Solar Amulet" "Voltaic Staff" 
+Rarity <= Magic
 
 Hide
 AreaLevel > 70
@@ -611,32 +664,3 @@ Hide
 AreaLevel > 72
 Rarity <= Magic
 Class "Body Armours" "Helmets" "Boots" "Gloves" "Shields" "Foci" "One Hand Maces" "Two Hand Maces" "Quarterstaves" "Bows" "Crossbows"
-
-# Quivers have some relevant bases at 50+ so we treat them different
-Hide
-AreaLevel > 74
-Rarity <= Magic
-DropLevel < 50
-Class "Quivers"
-
-Hide
-AreaLevel > 70
-Rarity <= Normal
-DropLevel < 50
-Class "Body Armours" "Helmets" "Boots" "Gloves" "Shields" "Foci" "Quivers" "One Hand Maces" "Two Hand Maces" "Quarterstaves" "Bows" "Crossbows"
-
-Hide
-Rarity <= Magic
-Class "Flasks" "Body Armours" "Helmets" "Boots" "Gloves" "Shields" "Foci" "Quivers" "One Hand Maces" "Two Hand Maces" "Staves" "Quarterstaves" "Bows" "Crossbows" "Wands" "Sceptres"
-
-Hide
-BaseType == "Amethyst Ring" "Attuned Wand" "Breach Ring" "Chiming Staff" "Expert Altar Robe" "Expert Barrier Quarterstaff" "Expert Bombard Crossbow" "Expert Brigand Mace" "Expert Cloaked Mail" "Expert Construct Hammer" "Expert Crumbling Maul" "Expert Doubled Gauntlets" "Expert Dualstring Bow" "Expert Dyad Crossbow" "Expert Edged Buckler" "Expert Elite Greathelm" "Expert Feathered Sandals" "Expert Feathered Targe" "Expert Feathered Tiara" "Expert Forlorn Crossbow" "Expert Goldcast Cuffs" "Expert Heavy Crown" "Expert Hexer's Robe" "Expert Hunter Hood" "Expert Hunting Shoes" "Expert Intricate Gloves" "Expert Iron Cuirass" "Expert Keth Raiment" "Expert Leaden Greathammer" "Expert Lizardscale Boots" "Expert Moulded Mitts" "Expert Oak Greathammer" "Expert Omen Crest Shield" "Expert Pathfinder Coat" "Expert Pelt Leggings" "Expert Pelt Mantle" "Expert Plumed Focus" "Expert Rogue Armour" "Expert Sacrificial Mantle" "Expert Scale Mail" "Expert Scalper's Jacket" "Expert Serpentscale Coat" "Expert Shaman Mantle" "Expert Shielded Helm" "Expert Slicing Quarterstaff" "Expert Spined Bracers" "Expert Spiral Wraps" "Expert Stacked Sabatons" "Expert Steel Plate" "Expert Stone Greaves" "Expert Stone Tower Shield" "Expert Studded Vest" "Expert Tribal Mask" "Expert Vaal Cuirass" "Expert Warpick" "Expert Waxed Jacket" "Expert Wayfarer Jacket" "Expert Zealot Bow" "Omen Sceptre" "Plate Belt" "Primed Quiver" "Prismatic Ring" "Rattling Sceptre" "Siphoning Wand" "Solar Amulet" "Voltaic Staff" 
-Rarity <= Magic
-
-Show
-BaseType == "Expert Laced Boots"
-
-Show
-Rarity Rare
-ItemLevel >= 81
-SetBorderColor 0 190 63

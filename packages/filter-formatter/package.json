@@ -1,0 +1,21 @@
+{
+  "name": "@kits-poe2-tools/filter-formatter",
+  "version": "0.0.0",
+  "description": "",
+  "main": "dist/cli.js",
+  "bin": {
+    "poe2-filter-formatter": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "ts-node esbuild.config.ts",
+    "format": "node dist/cli.js",
+    "test:run": "vitest run"
+  },
+  "keywords": [
+    "formatter",
+    "lootfilter",
+    "toolkit"
+  ],
+  "author": "tkitsunai",
+  "license": "MIT"
+}

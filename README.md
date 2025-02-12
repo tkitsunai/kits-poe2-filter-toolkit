@@ -1,6 +1,10 @@
-# kits-poe2-itemfilter
+# kits-poe2-itemfilter (to be toolkit)
 
-PoE2 Item filter. Based NeverSink's Item filter, Custmized for me
+PoE2 Item filter develop-toolkit.
+
+- Customizable PoE2 filter file.
+- Managable PoE2 filter file.
+- Provide filter file formatter.
 
 ## Super Thanks
 

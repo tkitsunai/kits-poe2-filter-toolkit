@@ -1,11 +1,9 @@
 import * as fs from "fs";
 import * as path from "path";
-import * as archiver from "archiver";
-import { execSync } from "child_process";
+import archiver from "archiver";
 
 const { version } = JSON.parse(fs.readFileSync("package.json", "utf-8"));
 
-const outputDir = "dist";
 const releaseDir = "release";
 
 const filterFiles: string[] = [];
