@@ -7,7 +7,8 @@
     "version:minor": "npm version minor",
     "version:patch": "npm version patch",
     "pushtag": "git push --tags",
-    "test": "pnpm -r run test"
+    "test": "pnpm -r run test",
+    "release:manager": "pnpm --filter @kits-poe2-tools/filter-manager run release"
   },
   "keywords": [
     "Path of Exile 2",
