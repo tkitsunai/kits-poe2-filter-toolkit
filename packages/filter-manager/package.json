@@ -1,6 +1,5 @@
 {
   "name": "@kits-poe2-tools/filter-manager",
-  "version": "3.1.0",
   "type": "module",
   "scripts": {
     "build": "tsc -b",

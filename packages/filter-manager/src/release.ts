@@ -2,7 +2,7 @@ import * as fs from "fs";
 import * as path from "path";
 import archiver from "archiver";
 
-const { version } = JSON.parse(fs.readFileSync("package.json", "utf-8"));
+const { version } = JSON.parse(fs.readFileSync("../../package.json", "utf-8"));
 
 const releaseDir = "release";
 
